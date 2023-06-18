@@ -6,12 +6,18 @@ a{
 p{
     color: #555;
 }
-.row{
+.row-2{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content:space-between;
-
+}
+.row{
+    display: inline-block;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    max-width: 300px;
 }
 .col-2{
     flex-basis: 50%;
@@ -62,7 +68,7 @@ p{
 .col-4{
     flex-basis: 25%;
     padding: 10px;
-    min-width: 200px;
+    min-width: 00px;
     margin-bottom: 50px;
     transition: trasnform 0.5s;
 }
@@ -71,7 +77,7 @@ p{
         flex-basis: 25%;
         padding: 10px;
         min-width: 330px;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
         transition: trasnform 0.5s;
     }
   }
