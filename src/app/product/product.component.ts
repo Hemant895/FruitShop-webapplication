@@ -18,6 +18,7 @@ export class ProductComponent implements OnInit {
   years?: Observable<any>;
   data?:[]
   product: any;
+  productdata: any;
   constructor(private api :ApiService,private db: AngularFireDatabase , private spinner:NgxSpinnerService) {
 
    }
@@ -98,4 +99,10 @@ onsaveproduct(){
       console.log(err)
     })
   }
+  AddToCart(){
+    if(this.productdata){
+    
+    }
+  }
+  
 }

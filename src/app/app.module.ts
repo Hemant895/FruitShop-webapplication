@@ -15,6 +15,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiService } from './services/api.service';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VarifyEmailComponent } from './varify-email/varify-email.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HomeComponent,
     HeaderComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    LoginComponent,
+    SignupComponent,
+    ForgetPasswordComponent,
+    VarifyEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +41,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AngularFireDatabaseModule,
     HttpClientModule,
    NgxSpinnerModule,
-   BrowserAnimationsModule
+   BrowserAnimationsModule,
+   ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [ApiService],
