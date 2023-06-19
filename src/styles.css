@@ -3,11 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
     background-color: rgb(237, 241, 236);
-    /* background-image: url('/assets/back2.jpg');
+    background-image: url('/assets/back2.jpg');
     background-size:     cover;                     
-    background-repeat:   no-repeat; */
+    background-repeat:   no-repeat;
     
    
-}
+} */
