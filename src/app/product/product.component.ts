@@ -5,6 +5,7 @@ import { fruishop } from '../module-name/fruishop.module';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { NgxSpinnerService } from "ngx-spinner";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -19,7 +20,7 @@ export class ProductComponent implements OnInit {
   data?:[]
   product: any;
   productdata: any;
-  constructor(private api :ApiService,private db: AngularFireDatabase , private spinner:NgxSpinnerService) {
+  constructor(private api :ApiService,private db: AngularFireDatabase , private spinner:NgxSpinnerService,private router:Router) {
 
    }
 
@@ -100,9 +101,7 @@ onsaveproduct(){
     })
   }
   AddToCart(){
-    if(this.productdata){
-    
-    }
+      this.router.navigate(["/product-details"]);
   }
   
 }
