@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
  loggedin = this.user?true:false;
  signOut(){
   localStorage.clear();
-  window.location.reload();
   this.router.navigate(["/login"]);
  }
 
