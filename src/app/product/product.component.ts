@@ -76,7 +76,7 @@ export class ProductComponent implements OnInit {
       "img": "https://www.windsoreats.com/wp-content/uploads/2015/05/strawberry1.jpg",
       "rupees": "90",
       "title": "Strawberry "
-  }
+   }
 
 ]
 
@@ -85,21 +85,35 @@ onsaveproduct(){
     console.log(res);
   })
 }
-  get(){
-    this.api.getdata().subscribe(res=>{
-      
+get(){
+  this.api.getdata().subscribe({
+    next: (res) =>{
       this.spinner.show();
       setTimeout(() => {
         /** spinner ends after 5 seconds */
         this.spinner.hide();
       }, 1000);
-      this.fruitshop = JSON.stringify(res)
-      this.product = JSON.parse(this.fruitshop)
+      this.fruitshop = JSON.stringify(res);
+      this.product = JSON.parse(this.fruitshop);
       console.log("get",this.product);
-    },(err)=>{
-      console.log(err)
-    })
-  }
+    },
+    error: (e) =>{console.log(e)}
+ });}
+  // get(){
+  //   this.api.getdata().subscribe(res=>{
+      
+  //     this.spinner.show();
+  //     setTimeout(() => {
+  //       /** spinner ends after 5 seconds */
+  //       this.spinner.hide();
+  //     }, 1000);
+  //     this.fruitshop = JSON.stringify(res)
+  //     this.product = JSON.parse(this.fruitshop)
+  //     console.log("get",this.product);
+  //   },(err)=> void {
+  //     console.log(err)
+  //   })
+  // }
   AddToCart(){
       this.router.navigate(["/product-details"]);
   }

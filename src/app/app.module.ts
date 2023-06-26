@@ -20,6 +20,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VarifyEmailComponent } from './varify-email/varify-email.component';
+import { AddProductComponent } from './add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { VarifyEmailComponent } from './varify-email/varify-email.component';
     LoginComponent,
     SignupComponent,
     ForgetPasswordComponent,
-    VarifyEmailComponent
+    VarifyEmailComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
