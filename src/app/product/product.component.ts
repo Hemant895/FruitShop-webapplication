@@ -93,8 +93,8 @@ get(){
         /** spinner ends after 5 seconds */
         this.spinner.hide();
       }, 1000);
-      this.fruitshop = JSON.stringify(res);
-      this.product = JSON.parse(this.fruitshop);
+      this.fruitshop = res
+      this.product = this.fruitshop.mydata;
       console.log("get",this.product);
     },
     error: (e) =>{console.log(e)}

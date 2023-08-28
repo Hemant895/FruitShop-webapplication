@@ -15,9 +15,17 @@ export class ApiService {
     return this.fruitshopRef;
   }
  saveproduct(data:any[]){
-    return this.httpClient.put("https://fruitshop-a60d4-default-rtdb.firebaseio.com/products.json" , data)
+    return this.httpClient.post("https://nodejsapi-production.up.railway.app/addproduct" , data)
   }
   getdata(){
-    return this.httpClient.get("https://fruitshop-a60d4-default-rtdb.firebaseio.com/products.json" )
+    return this.httpClient.get("https://nodejsapi-production.up.railway.app/api/products")
   }
+  // getdata(){
+  //   return  this.httpClient.get('http://localhost:3000/api/products')
+  // }
+
+  getapidata(){
+    return this.httpClient.get('https://jsonplaceholder.typicode.com/photos');
+  }
+
 }

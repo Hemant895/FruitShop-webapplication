@@ -67,13 +67,18 @@ export class AddProductComponent implements OnInit {
 
    
  submitform(){
-this.products.push({
-    title: this.productform.value.title,
+// this.products= {
+//     title: this.productform.value.title,
+//     img: this.productform.value.img,
+//     rupees: this.productform.value.rupees,
+//       };
+      let products:any ={
+   title: this.productform.value.title,
     img: this.productform.value.img,
-    rupees: this.productform.value.rupees,
-      });
+    price: this.productform.value.rupees,
+           }
   console.log(this.productform.value)
-  this.api.saveproduct(this.products).subscribe({
+  this.api.saveproduct(products).subscribe({
     next: (res) =>{console.log(res)},
     error:(err) =>{console.log(err)}
   })

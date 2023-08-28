@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
  ngOnInit(): void {
   setInterval(()=>{
     this.user =  localStorage.getItem('email')?.slice(1,7)
+    // console.log(this.router.url); 
   })
    
   this.router.events.subscribe((val: any) => {
