@@ -21,6 +21,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { VarifyEmailComponent } from './varify-email/varify-email.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { TestapiComponent } from './testapi/testapi.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     SignupComponent,
     ForgetPasswordComponent,
     VarifyEmailComponent,
-    AddProductComponent
+    AddProductComponent,
+    TestapiComponent
   ],
   imports: [
     BrowserModule,

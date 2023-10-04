@@ -1,0 +1,17 @@
+<table >
+ 
+        <tr>
+     <th> id</th>
+    <th> albumId</th>
+    <th>   thumbnailUrl</th>
+    <th>  title    </th>
+    <th>  url  </th>
+        </tr>
+    <tr *ngFor="let apidata of data">
+    <td>{{apidata.id }}</td>
+    <td> {{apidata.albumId}}</td>
+    <td> {{apidata.thumbnailUrl}}</td>
+    <td> {{apidata.title }}</td>
+    <td> {{apidata.url }}</td>
+</tr>
+</table>

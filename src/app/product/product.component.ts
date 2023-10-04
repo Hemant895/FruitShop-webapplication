@@ -93,8 +93,8 @@ get(){
         /** spinner ends after 5 seconds */
         this.spinner.hide();
       }, 1000);
-      this.fruitshop = JSON.stringify(res);
-      this.product = JSON.parse(this.fruitshop);
+      this.fruitshop = res
+      this.product = this.fruitshop.mydata;
       console.log("get",this.product);
     },
     error: (e) =>{console.log(e)}
@@ -117,5 +117,31 @@ get(){
   AddToCart(){
       this.router.navigate(["/product-details"]);
   }
-  
+
+  sort(order:any){
+  switch (order.target.value) {
+          case "Low" : {
+              this.product = this.product.sort((a:any,b:any)=>{
+                 return a.price - b.price
+              });
+              console.log(this.product)
+              break;          
+          }
+          case "High" : {
+            this.product = this.product.sort((a:any,b:any)=>{
+               return b.price - a.price;
+            });
+            console.log(this.product)
+            break;          
+        }
+        case "Name": {
+          this.product = this.product.sort(
+            (low:any, high:any) => {
+           return  high.title.toLowerCase().trim() <  low.title.trim().toLowerCase() ? 1 : -1
+          }
+          );
+          break;
+        }
+  }
+}
 }
