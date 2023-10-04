@@ -2,17 +2,26 @@
 <div class="smallcontainer font-medium">
     <div class="row-2 ">
         <h2 class="font-serif">All Products</h2>
-        <select
-            class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-r-lg border-l-gray-100 dark:border-l-gray-700 border-l-2 focus:ring-blue-500 focus:border-blue-500  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <!-- <select
+           >
             <option selected>Default Shorting</option>
             <option>Short by Price</option>
             <option>Short by Sale</option>
             <option>Short by Rating</option>
             <option>Short by Selection</option>
-        </select>
+        </select> -->
+        <select id="sort-by" (change)="sort($event)" 
+        class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-r-lg border-l-gray-100 dark:border-l-gray-700 border-l-2 focus:ring-blue-500 focus:border-blue-500  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="" selected disabled hidden class="flex text-center justify-center ">Sort By</option>
+            <option value="Name">Product list A-Z</option>
+            <!-- <option value="Name1">Product list Z-A</option>
+            <option value="Date">Date</option> -->
+            <option value="Low">Show Low to High Price</option>
+            <option value="High">Show High to Low Price</option>
+  </select>
     </div>
     <!-- <button (click)="onsaveproduct()">click</button> -->
-    <div class="row " *ngFor="let data of product">
+    <div class="row " *ngFor="let data of product" >
         <div class="col-4 row-start-1">
             <div class="w-full  max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-950 ">
                 <a href="#">
